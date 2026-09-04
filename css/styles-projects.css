@@ -1,0 +1,86 @@
+.tooltip {
+    font-size: 12px;
+}
+
+.tooltip::after {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    content: attr(data-tooltip);
+    position: absolute;
+    visibility: hidden;
+    margin: 260px 410px;
+    opacity: 0;
+    transform: translateY(30px);
+    padding: 4px 8px;
+            
+    transition: all 0.4s ease-in-out;
+}
+        
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+#count-mobile {
+	display: none;
+}
+#projects-list {
+	display: grid;
+	padding: 32px 0;
+}
+#projects-list div {
+	display: flex;
+	gap: 32px;
+	padding: 0 16px;
+}
+#projects-list a:hover {
+	background-color: #0C0C0C;
+}
+#projects-list div span{
+}
+#projects-list div img{
+    transition: transform 0.4s ease; 
+    image-rendering: pixelated; 
+    object-fit: contain;
+    flex-shrink: 0; 
+    width: 350px;
+    height: 250px;
+	margin: 32px;
+}
+#projects-list div img:hover{
+	transform: scale(1.1); 
+}
+#projects-list div h1{
+	font-size: 32px;
+}
+#projects-list div p{
+	font-family: 'Anonymous_Pro',Lato,LatoExtended,sans-serif;
+	font-size: 24px;
+}
+#projects-list a {
+	text-decoration: none;
+	color: inherit;
+}
+#projects-list div blockquote {
+	border-left: 4px solid white;
+	font-size: 16px;
+	margin: 0;
+	padding: 0 16px;
+}
+@media (max-width: 600px){
+	#count{
+		display: none;
+	}
+	#count-mobile {
+		display: block;
+		font-size: 6vw;
+	}
+	#projects-list div img {
+		padding: 16px 0;
+		margin: 0;
+	}
+
+	#projects-list div {
+		display: grid;
+	}
+}

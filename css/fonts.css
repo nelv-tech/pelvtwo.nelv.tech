@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Pixel";
+    src: url("../fonts/Press Start 2P/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Anonymous_Pro";
+    src: url("../fonts/Anonymous_Pro/AnonymousPro-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: 'Gravity Light';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/Gravity/ofont.ru_Gravity_Thin.ttf'); 
+}
+@font-face {
+  font-family: 'Gravity Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Gravity/ofont.ru_Gravity_Normal.ttf'); 
+}
+@font-face {
+  font-family: 'Gravity Light';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/Gravity/ofont.ru_Gravity_Bold.ttf'); 
+}
+    

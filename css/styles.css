@@ -1,0 +1,302 @@
+::selection {
+    background-color: white;
+    color: #0C0C0C;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+	font-family: "Pixel", Arial, sans-serif;
+	background-color: black;
+	color: white;
+    touch-action: manipulation;
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.reveal {
+	opacity: 0;
+}
+.reveal.active {
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 1;
+}
+.reveal_dy {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.reveal_dy.active {
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+header {
+    background-color: black;    
+    display: flex;
+    position: sticky;
+    height: auto;
+    border-bottom: solid white 0.8vh;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    top: 0;
+    padding: 2vh 2vw;
+    
+}
+header span {
+    display: flex;
+    gap: 2vw;
+}
+header h1 {
+    background-color: black;
+    color: white;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 2.4vw;
+    padding: 0;
+    margin: 0;
+}
+header a {
+    text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+header span a{
+    background-color: black;
+    color: white;
+    overflow-wrap: break-word;
+    font-size: 1.6vw;
+    padding: 1vh 1vw;
+    margin: 0;
+}
+header span a:hover {
+    background-color: white;
+    color: black;
+}
+#burger {
+    display: none;
+}
+#burger-menu {
+    display: none;
+}
+main {
+    overflow-x: hidden;
+}
+.base {
+    padding: 64px 32px;
+}
+.base h1 {
+    font-family: Anonymous_Pro, Arial, sans-serif;
+    color: white;
+    font-size: 48px;
+    margin-top: 0;
+}
+.base p {
+    font-family: Anonymous_Pro, Arial, sans-serif;
+    color: white;
+    font-size: 32px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.base a{
+    font-family: Pixel, Arial, sans-serif;
+    background-color: black;
+    color: white;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    font-size: 32px;
+    padding: 4px 8px;
+    margin: 0;
+}
+.base a:hover {
+    background-color: white;
+    color: black;
+}
+#logo {
+    padding: 96px 0;
+}
+#logo h1 {
+	text-align: center;
+	font-size: 128px;
+    margin: 0;
+}
+#logo p {
+	text-align: center;
+	font-size: 48px;
+    margin-bottom: 0;
+}
+#about {
+    scroll-margin-top: 64px; 
+    background-color: #0C0c0c;   
+}
+#projects {
+    scroll-margin-top: 64px; 
+    background-color: black;
+}
+#projects-top {
+    overflow-x: auto;
+    display: inline-flex;
+    width: 100%;
+    gap: 32px;
+    padding: 8px ;
+}
+#projects-top a {
+    display: grid;
+    text-decoration: none;
+}
+#projects-top a:hover {
+    background-color: black;
+}
+#projects img {
+    overflow: hidden; 
+    transition: transform 0.4s ease; 
+    image-rendering: pixelated; 
+    width: 350px;
+    height: 250px;
+}
+#projects img:hover {
+    transform: scale(1.1); 
+}
+#projects a {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#contacts {
+    background-color: #0C0c0c;   
+}
+#contacts p {margin: 8px}
+.tooltip {
+    font-size: 12px;
+}
+
+.tooltip::after {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    content: attr(data-tooltip);
+    position: absolute;
+    visibility: hidden;
+    margin-top: -256px;
+    opacity: 0;
+    transform: translateY(-30px);
+    padding: 4px 8px;
+            
+    transition: all 0.4s ease-in-out;
+}
+        
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+footer {
+    padding: 32px;
+}
+footer h1{
+    font-size: 32px;
+}
+footer p{
+    text-align: center;
+    font-size: 24px;
+}
+
+#waterfall-production-footer {
+    font-family: Gravity Light, Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+    padding: 32px 0;
+    margin: 0;
+}
+#waterfall-production-footer a {
+    color: black;
+    display: inline-flex;
+    border: 1px solid black;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    padding: 8px 16px;
+    font-size: 32px;
+    font-weight: 200;
+}
+@media (max-width: 600px){
+    header {
+        position: sticky;
+        overflow-x: clip; 
+        padding: 2vh 4vw;
+    }
+    header h1 {
+        font-size: 8vw;
+    }
+    header span {
+        display: none;
+    }
+    #burger {
+        display: block;
+        font-size: 8vw;
+    }
+    #burger-menu {
+        background-color: black;
+        border: solid white 0.8vh;
+        display: grid;
+        position: absolute;
+        justify-items: center;
+        transform: translateX(150%);
+        transition: transform 0.5s ease, opacity 0.3s ease;
+        gap: 3.2vh;
+        left: 0;
+        right: 0;
+        top: 10vh;
+        z-index: 1;
+        padding: 4vh 4vw;
+        opacity: 0;
+    }
+    #burger-menu a {
+        color: white;
+    }
+    #burger-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    #logo {
+        padding: 16px 0;
+    }
+    #logo h1 {
+        font-size: 32px;
+    }
+    #logo p {
+        font-size: 16px;
+    }
+    .base {
+        padding: 16px 32px;
+    }
+    .base h1 {
+        font-size: 24px;
+    }
+    .base p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .base a {
+        font-size: 16px;
+    }
+    .projects-top {
+        height: auto;
+    }
+    #projects img {
+        width: 200px;
+        height: 150px;
+    }
+    footer {
+        padding: 16px 32px;
+    }
+    footer h1 {
+        font-size: 16px;
+    }
+    footer p {
+        font-size: 8px;
+    }
+    #waterfall-production-footer {
+        padding: 16px 32px;
+    }
+    #waterfall-production-footer a{
+        font-size: 16px;
+    }
+}
