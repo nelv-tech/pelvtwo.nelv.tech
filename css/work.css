@@ -1,51 +1,47 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 ::selection {
     background-color: white;
     color: #0C0C0C;
 }
 html {
     scroll-behavior: smooth;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 body {
-    font-family: "Pixel", Arial, sans-serif;
-    background-color: black;
-    color: white;
+	font-family: "Pixel", Arial, sans-serif;
+	background-color: black;
+	color: white;
     touch-action: manipulation;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-.reveal, .reveal_dy {
-    opacity: 0;
+.reveal {
+	opacity: 0;
+}
+.reveal.active {
     transition: opacity 1s ease, transform 1s ease;
+    opacity: 1;
 }
-
 .reveal_dy {
+    opacity: 0;
     transform: translateY(30px);
 }
-
-.reveal.active, .reveal_dy.active {
+.reveal_dy.active {
+    transition: opacity 1s ease, transform 1s ease;
     opacity: 1;
     transform: translateY(0);
 }
-header {   
-    position: sticky;
-    align-items: center;
-    z-index: 998;
-    top: 0;
-}
 #header_top {
-    background-color: black; 
-    position: sticky;
+    background-color: black;    
     display: flex;
-    justify-content: space-between;
+    position: sticky;
+    height: auto;
     border-bottom: solid white 0.8vh;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     z-index: 999;
+    top: 0;
     padding: 2vh 2vw;
+    
 }
 #header_top span {
     display: flex;
@@ -57,14 +53,13 @@ header {
     -webkit-user-select: none;
     user-select: none;
     font-size: 2.4vw;
+    padding: 0;
     margin: 0;
 }
 #header_top a {
     text-decoration: none;
     -webkit-user-select: none;
     user-select: none;
-    padding: 0;
-    
 }
 #header_top span a{
     background-color: black;
@@ -72,14 +67,17 @@ header {
     overflow-wrap: break-word;
     font-size: 1.6vw;
     padding: 1vh 1vw;
-    margin:auto 2vw;
+    margin: 0;
 }
 #header_top span a:hover {
     background-color: white;
     color: black;
 }
 
-#burger, #burger-menu {
+#burger {
+    display: none;
+}
+#burger-menu {
     display: none;
 }
 main {
@@ -119,13 +117,13 @@ main {
     padding: 96px 0;
 }
 #logo h1 {
-    text-align: center;
-    font-size: 128px;
+	text-align: center;
+	font-size: 128px;
     margin: 0;
 }
 #logo p {
-    text-align: center;
-    font-size: 48px;
+	text-align: center;
+	font-size: 48px;
     margin-bottom: 0;
 }
 #about {
@@ -139,10 +137,9 @@ main {
 #projects-top {
     overflow-x: auto;
     display: inline-flex;
-    overflow-x: hidden;
     width: 100%;
     gap: 32px;
-    padding: 16px 32px;
+    padding: 8px ;
 }
 #projects-top a {
     display: grid;
@@ -152,6 +149,7 @@ main {
     background-color: black;
 }
 #projects img {
+    overflow: hidden; 
     transition: transform 0.4s ease; 
     image-rendering: pixelated; 
     flex-shrink: 0;
@@ -225,6 +223,7 @@ footer p{
         display: none;
     }
     #header_top {
+        position: sticky;
         padding: 2vh 4vw;
     }
     #header_top h1 {
@@ -240,7 +239,6 @@ footer p{
     #burger-menu {
         background-color: black;
         border: solid white 0.8vh;
-        border-top: none;
         display: grid;
         position: absolute;
         justify-items: center;
@@ -252,7 +250,7 @@ footer p{
         gap: 3.2vh;
         left: 0;
         right: 0;
-        top: 100%;
+        top: 10vh;
         z-index: 1;
         padding: 4vh 4vw;
 
@@ -286,9 +284,8 @@ footer p{
     .base a {
         font-size: 16px;
     }
-    #projects-top {
+    .projects-top {
         height: auto;
-        overflow-x: auto;
     }
     #projects img {
         width: 200px;
