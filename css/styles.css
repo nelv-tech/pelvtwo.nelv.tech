@@ -30,7 +30,7 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-header {
+#header_top {
     background-color: black;    
     display: flex;
     position: sticky;
@@ -43,11 +43,11 @@ header {
     padding: 2vh 2vw;
     
 }
-header span {
+#header_top span {
     display: flex;
     gap: 2vw;
 }
-header h1 {
+#header_top h1 {
     background-color: black;
     color: white;
     -webkit-user-select: none;
@@ -56,12 +56,12 @@ header h1 {
     padding: 0;
     margin: 0;
 }
-header a {
+#header_top a {
     text-decoration: none;
     -webkit-user-select: none;
     user-select: none;
 }
-header span a{
+#header_top span a{
     background-color: black;
     color: white;
     overflow-wrap: break-word;
@@ -69,17 +69,16 @@ header span a{
     padding: 1vh 1vw;
     margin: 0;
 }
-header span a:hover {
+#header_top span a:hover {
     background-color: white;
     color: black;
 }
+
 #burger {
     display: none;
-	z-index: 999;
 }
 #burger-menu {
     display: none;
-	z-index: 999;
 }
 main {
     overflow-x: hidden;
@@ -219,15 +218,17 @@ footer p{
     font-weight: 200;
 }
 @media (max-width: 600px){
-    header {
+    .tooltip::after {
+        display: none;
+    }
+    #header_top {
         position: sticky;
-        overflow-x: clip; 
         padding: 2vh 4vw;
     }
-    header h1 {
+    #header_top h1 {
         font-size: 8vw;
     }
-    header span {
+    #header_top span {
         display: none;
     }
     #burger {
@@ -240,15 +241,18 @@ footer p{
         display: grid;
         position: absolute;
         justify-items: center;
-        transform: translateX(150%);
-        transition: transform 0.5s ease, opacity 0.3s ease;
+        transition: transform 0.5s ease;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, -150%, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
         gap: 3.2vh;
         left: 0;
         right: 0;
         top: 10vh;
         z-index: 1;
         padding: 4vh 4vw;
-        opacity: 0;
+
     }
     #burger-menu a {
         color: white;
