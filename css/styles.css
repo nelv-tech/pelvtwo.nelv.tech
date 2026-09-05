@@ -75,9 +75,11 @@ header span a:hover {
 }
 #burger {
     display: none;
+	z-index: 999;
 }
 #burger-menu {
     display: none;
+	z-index: 999;
 }
 main {
     overflow-x: hidden;
