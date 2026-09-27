@@ -1,0 +1,64 @@
+@import "desktop.css";
+@import "mobile.css";
+.tooltip {
+    font-size: 12px;
+}
+.tooltip::after {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    content: attr(data-tooltip);
+    position: absolute;
+    visibility: hidden;
+    margin: 260px 440px;
+    opacity: 0;
+    transform: translateY(50px);
+    padding: 4px 8px;      
+    transition: all 0.4s ease-in-out;
+}   
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+#projects-list {
+	display: grid;
+}
+#projects-list div {
+	display: flex;
+}
+#projects-list h1, blockquote{
+	 font-family: "Press Start 2P", Arial, sans-serif;
+}
+#projects-list p {
+	font-family: "Anonymous Pro", Lato, LatoExtended, sans-serif;
+	margin: 8px 0;
+}
+#projects-list h1 {
+	line-height: 1.6;
+}
+#projects-list a {
+	text-decoration: none;
+	color: inherit;
+}
+#projects-list hr {
+	width: 100%;
+	margin: 16px;
+}
+#projects-list div img{
+    transition: transform 0.4s ease; 
+    image-rendering: pixelated; 
+    object-fit: cover;
+    flex-shrink: 0; 
+}
+#projects-list div blockquote {
+	border-left: 4px solid white;
+	padding-left: 8px;
+}
+@media(hover: hover){
+	#projects-list div:hover img{
+		transform: scale(1.1); 
+	}
+	#projects-list a:hover {
+		background-color: #0C0C0C;
+	}
+}

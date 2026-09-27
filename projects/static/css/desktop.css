@@ -1,0 +1,35 @@
+@media(pointer: fine){
+	#count-desktop {
+		display: block;
+	}
+	#count-mobile {
+		display: none;
+	}
+	#projects-list {
+		padding: 32px 0;
+	}
+	#projects-list div{
+		gap: 32px;
+		padding: 0 16px;
+	}
+	#projects-list a {
+		margin-top: 16px;
+	}
+	#projects-list div img{
+	    width: 350px;
+	    height: 250px;
+		margin: 32px;
+	}
+	#projects-list div h1{
+		font-size: 32px;
+	}
+	#projects-list div p{
+		font-size: 24px;
+	}
+	#projects-list div blockquote {
+		border-left: 4px solid white;
+		font-size: 16px;
+		margin: 0;
+		padding: 0 16px;
+	}
+}

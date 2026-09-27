@@ -1,0 +1,9 @@
+User-agent: *
+
+Allow: /
+Allow: /static/
+Allow: /projects/
+Аllow: /.well-known/security.txt
+Allow: /humans.txt
+
+Sitemap: https://pelvtwo.nelv.tech/sitemap.xml
